@@ -3,23 +3,29 @@ class Cube:
     y: int
     z: int
 
-    def __init__(self, x, y, z):
-        self.x = x
-        self.y = y
-        self.z = z
+    def __init__(self, x: int, y: int, z: int):
+        # ВОПРОС!!!!! Почему x: int при инициализации пропускает буквенное значение?
+        # пришлось проверять чз преобразование в интеджер
+        self.x = int(x)
+        self.y = int(y)
+        self.z = int(z)
 
-    def get_x(self):
+    def _get_x(self):
         return self.x
 
-    def get_y(self):
+    def _get_y(self):
         return self.y
 
-    def get_z(self):
+    def _get_z(self):
         return self.z
+
+    def get_volume(self):
+        return self._get_x() * self._get_y() * self._get_z()
 
 
 class CubeVolumeCalculator:
 
     @staticmethod
     def calc_cube_volume(cube):
-        return cube.get_x() * cube.get_y() * cube.get_z()
+        return cube.get_volume()
+
