@@ -5,31 +5,25 @@ class Obj:
     # - лекаря
     # - дерева
     # - ловушки
-
-    def attack(self):
-        pass
-
     def defense(self):
         pass
 
     def move(self):
         pass
 
-    def healer_defense(self):
+class Knight(Obj):
+    def attack(self):
         pass
 
-    def healer_move(self):
-        pass
-
+class Healer(Obj):
     def heal(self):
         pass
 
-    def tree_defense(self):
-        pass
-
+class Tree(Obj):
     def on_fire(self):
         pass
 
+class Trap(Obj):
     def trap_attack(self):
         print("It's a trap!")
 
